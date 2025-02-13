@@ -9,6 +9,7 @@ import couple5Image from "../assets/couple/couple5.jpg";
 import couple6Image from "../assets/couple/couple6.jpg";
 import couple7Image from "../assets/couple/couple7.jpg";
 import heartBallon from "../assets/1x/HeartBallon.png";
+import loveSong from "../assets/love-song.mp3";
 
 const coupleImages = [
   couple1Image,
@@ -29,12 +30,20 @@ const ValentineText = () => (
       Roses are red, violets are blue, sugar is sweet, and so are you.
     </p>
     <div className="flex justify-center">
-      <button className="bg-pink-500 px-6 py-2 rounded-full hover:bg-pink-600 mt-8">
+      <button
+        className="bg-pink-500 px-6 py-2 rounded-full hover:bg-pink-600 mt-8"
+        onClick={playSong}
+      >
         Next
       </button>
     </div>
   </div>
 );
+
+function playSong() {
+  const audio = new Audio(loveSong);
+  audio.play();
+}
 
 const LoveMessage = () => (
   <div className="text-white">
