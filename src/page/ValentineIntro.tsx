@@ -66,7 +66,7 @@ const LoveMessage = () => (
 
 const OurImage = () => (
   <div className="text-white">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center">
+    <div className="grid grid-cols-3 md:grid-cols-3 gap-4 justify-center items-center">
       <div className="flex justify-center">
         <img
           src={muImage}
