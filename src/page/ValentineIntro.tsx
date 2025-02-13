@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 import maImage from "../assets/ma.jpg";
 import muImage from "../assets/mu.jpg";
-import couple1Image from "../assets/couple/couple1.jpg";
-import couple2Image from "../assets/couple/couple2.jpg";
-import couple3Image from "../assets/couple/couple3.jpg";
-import couple4Image from "../assets/couple/couple4.jpg";
-import couple5Image from "../assets/couple/couple5.jpg";
-import couple6Image from "../assets/couple/couple6.jpg";
-import couple7Image from "../assets/couple/couple7.jpg";
 import heartBallon from "../assets/1x/HeartBallon.png";
 
 // Previous components remain the same
@@ -160,7 +153,7 @@ const ValentineIntro = () => {
     ...Array(7)
       .fill()
       .map((_, i) => () => (
-        <CoupleImage imagePath={eval(`couple${i + 1}Image`)} />
+        <CoupleImage imagePath={`../assets/couple/couple${i + 1}.jpg`} />
       )),
   ];
 
