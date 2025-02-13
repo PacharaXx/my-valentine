@@ -1,4 +1,14 @@
 import { useState, useEffect } from "react";
+import maImage from "../assets/ma.jpg";
+import muImage from "../assets/mu.jpg";
+import couple1Image from "../assets/couple/couple1.jpg";
+import couple2Image from "../assets/couple/couple2.jpg";
+import couple3Image from "../assets/couple/couple3.jpg";
+import couple4Image from "../assets/couple/couple4.jpg";
+import couple5Image from "../assets/couple/couple5.jpg";
+import couple6Image from "../assets/couple/couple6.jpg";
+import couple7Image from "../assets/couple/couple7.jpg";
+import heartBallon from "../assets/1x/HeartBallon.png";
 
 // Previous components remain the same
 const ValentineText = () => (
@@ -41,7 +51,7 @@ const OurImage = () => (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center">
       <div className="flex justify-center">
         <img
-          src="/src/assets/mu.jpg"
+          src={muImage}
           alt="First person"
           className="w-auto h-80 rounded-2xl object-cover"
         />
@@ -51,7 +61,7 @@ const OurImage = () => (
       </div>
       <div className="flex justify-center">
         <img
-          src="/src/assets/ma.jpg"
+          src={maImage}
           alt="Second person"
           className="w-auto h-80 rounded-2xl object-cover"
         />
@@ -150,7 +160,7 @@ const ValentineIntro = () => {
     ...Array(7)
       .fill()
       .map((_, i) => () => (
-        <CoupleImage imagePath={`/src/assets/couple/couple${i + 1}.jpg`} />
+        <CoupleImage imagePath={eval(`couple${i + 1}Image`)} />
       )),
   ];
 
@@ -190,7 +200,7 @@ const ValentineIntro = () => {
               }}
             >
               <img
-                src="/src/assets/1x/HeartBallon.png"
+                src={heartBallon}
                 alt="heart"
                 className="w-24 h-24 md:w-32 md:h-32 opacity-80"
               />
